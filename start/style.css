@@ -20,6 +20,7 @@ body {
   word-spacing: 2px;
   background-color: var(--black-color);
   color: var(--white-color);
+  transition: 0.5s ease-in-out;
 }
 ul {
   list-style: none;
@@ -38,6 +39,7 @@ p {
 .crud .head {
   text-align: center;
   padding: 1rem 0;
+  transition: 0.5s ease-in-out;
 }
 .head h1 {
   font-size: 3rem;
@@ -127,6 +129,7 @@ table {
   width: 100%;
   margin: 0.5rem 0;
   text-align: center;
+  transition: 0.5s ease-in-out;
 }
 
 table tr th {
@@ -143,4 +146,51 @@ table tbody tr td {
 th,
 td {
   padding: 0.2rem;
+}
+/* switch toggle */
+.switchToggle {
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  width: 85px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: #b6b2b285;
+  padding: 2px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.switchToggle .toogleIcon {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  transition: 0.5s ease-in-out;
+  z-index: 100;
+}
+.switchToggle.moodOn .toogleIcon {
+  transform: translateX(125%);
+  z-index: 100;
+}
+.toogle-on-off {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 8px;
+  z-index: -1;
+}
+.toogle-on-off span {
+  display: inline-block;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: bolder;
+  color: #f0f0f0;
 }

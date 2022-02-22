@@ -205,3 +205,26 @@ let searchData = (value) => {
   })
   document.getElementById('tbody').innerHTML = table
 }
+// switch toogle
+let switchToogle = document.querySelector('.switchToggle')
+let toogleIcon = document.querySelector('.toogleIcon')
+let header = document.querySelector('.head')
+let table = document.querySelector('table')
+switchToogle.addEventListener('click', () => {
+  moveToRight()
+})
+let moveToRight = () => {
+  switchToogle.classList.toggle('moodOn')
+  if (switchToogle.classList.contains('moodOn')) {
+    document.body.style.background = '#F6F6F6'
+    switchToogle.style.background = '#242424'
+    header.style.color = '#242424'
+    table.style.color = '#242424'
+  } else {
+    document.body.style.background = '#242424'
+    header.style.color = '#F6F6F6'
+    table.style.color = '#242424'
+    switchToogle.style.background = '#b6b2b285'
+    table.style.color = '#F0F0F0'
+  }
+}
